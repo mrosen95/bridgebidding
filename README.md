@@ -77,12 +77,29 @@ If a phone can't connect, it's almost always one of: different WiFi network,
 a firewall blocking the port, or a typo in the IP address — double-check all
 three.
 
-### Option C — Publish it online (optional, for a permanent link)
+### Option C — GitHub Pages (recommended: one permanent link, no laptop required)
 
-Since this is a fully static site, you can host it for free on
-[GitHub Pages](https://pages.github.com/), Netlify, or Vercel by pointing
-them at this repo — no build step required. This gives you a permanent URL
-you can reuse for every game night instead of re-running a local server.
+This repo is already set up for GitHub Pages (public repo, static files, a
+`.nojekyll` file so GitHub serves it as-is). Turning it on is a one-time,
+one-minute setting — no command line needed:
+
+1. Go to **Settings → Pages** in this repo:
+   `https://github.com/mrosen95/bridgebidding/settings/pages`
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**.
+3. Under **Branch**, pick the branch with the site on it (`main` once this
+   is merged, otherwise `claude/bridge-bidding-web-app-k74p9m`) and folder
+   **/ (root)**, then click **Save**.
+4. Wait ~1 minute, then reload the Pages settings page — it'll show a green
+   banner with your live URL:
+
+   ```
+   https://mrosen95.github.io/bridgebidding/
+   ```
+
+That link works from any phone or browser, no WiFi matching or terminal
+required, and it keeps working for every future game night. Whenever you
+push new content to the branch Pages is watching, the site updates
+automatically within a minute or two.
 
 ## Project structure
 
